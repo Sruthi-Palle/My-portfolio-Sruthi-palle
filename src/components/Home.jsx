@@ -8,12 +8,15 @@ export const Home = () => {
         <span className="block text-4xl sm:text-5xl font-light">
           Sruthi, a front-end developer
         </span>{" "}
-        with a passion to design and build user-interfaces
+        with a passion to design and build user-interfaces.{" "}
+        <span className="block">
+          I make web a beautiful place with every line of code
+        </span>
       </p>
       <img
         src="https://i.ibb.co/VCkkWxT/8530-E800-530-C-4-B32-BC4-B-988093897853-1-201-a.jpg"
         alt="8530-E800-530-C-4-B32-BC4-B-988093897853-1-201-a"
-        className="rounded-t-full h-[450px] sm:h-[500px]"
+        className="rounded-t-full h-[450px] sm:h-[500px] lg:h-[550px] xl:h-[600px] "
       />
     </div>
   );
