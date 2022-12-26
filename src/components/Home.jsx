@@ -8,7 +8,8 @@ export const Home = () => {
         <span className="block text-4xl sm:text-5xl font-light">
           Sruthi, a front-end developer
         </span>{" "}
-        with a passion to design and build user-interfaces.{" "}
+        with 1.2 years of freelancing experience.I design and build
+        user-interfaces.
         <span className="block">
           I make web a beautiful place with every line of code
         </span>
