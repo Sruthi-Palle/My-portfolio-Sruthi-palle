@@ -39,14 +39,19 @@ const links = [
 
 export const Certifications = () => {
   return (
-    <div className="flex flex-wrap flex-col md:flex-row justify-center gap-8  bg-gradient-to-r from-fuchsia-200 to-cyan-200 py-12">
-      {links.map((each) => (
-        <CertificationsCard
-          certification={each.certi}
-          title={each.title}
-          verify={each.verify}
-        />
-      ))}
+    <div className="bg-gradient-to-r from-fuchsia-200 to-cyan-200 py-6">
+      <h1 className="text-4xl font-light py-5 sm:text-6xl text-fuchsia-800  px-10">
+        Certifications
+      </h1>
+      <div className="flex flex-wrap flex-col md:flex-row justify-center gap-8  ">
+        {links.map((each) => (
+          <CertificationsCard
+            certification={each.certi}
+            title={each.title}
+            verify={each.verify}
+          />
+        ))}
+      </div>
     </div>
   );
 };

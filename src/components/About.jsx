@@ -5,7 +5,7 @@ export const About = () => {
     <div className="bg-gradient-to-r from-cyan-200 to-fuchsia-200  p-11 py-20 text-fuchsia-800 font-light">
       <h1 className="text-4xl font-light py-5 sm:text-6xl">About Me</h1>
       <div className="flex items-center justify-center ">
-        <div className="sm:text-lg ">
+        <div className="sm:text-lg">
           <p>
             My name is Sruthi Palle. I have completed my graduation in
             Humanities. After completion of my graduation i was looking for good
