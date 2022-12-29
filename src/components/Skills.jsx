@@ -35,7 +35,7 @@ const LogoImage = ({ image, title }) => {
     <div>
       <img
         src={image}
-        className=" h-20 w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28"
+        className=" h-20 w-20 lg:h-24 lg:w-24 xl:h-[100px] xl:w-[100px]"
         alt="html"
       />
       <h1 className="font-medium text-center">{title}</h1>

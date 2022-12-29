@@ -1,6 +1,42 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { useState } from "react";
+
+const links = [
+  { id: 1, to: "home", title: "Home" },
+  { id: 2, to: "about", title: "About" },
+  { id: 3, to: "certifications", title: "Certifications" },
+  { id: 4, to: "projects", title: "Projects" },
+  { id: 5, to: "skills", title: "Skills" },
+  { id: 6, to: "contact", title: "Contact" },
+];
+
+const NavLink = ({ to, isactive, title, id, handleClick }) => {
+  return (
+    <div>
+      <Link
+        activeClass={id === 1 && "active"}
+        to={to}
+        spy={true}
+        smooth={true}
+        className="cursor-pointer mr-6 mb-2 sm:mr-0"
+        onClick={() => handleClick(id)}
+      >
+        {title}
+      </Link>
+      {isactive && (
+        <div className="h-1 bg-gradient-to-l from-cyan-500 to-fuchsia-600 mr-5 sm:mr-0 rounded"></div>
+      )}
+    </div>
+  );
+};
+
 export const Navbar = () => {
+  const [activeTab, setActiveTab] = useState(links[0].id);
+  const handleClick = (value) => {
+    setActiveTab(value);
+  };
+
   return (
     <div id="navbar" className="fixed w-full">
       <div className="flex w-full bg-gradient-to-r from-teal-300 to-fuchsia-400 h-28  items-center px-4 justify-between sticky">
@@ -12,64 +48,15 @@ export const Navbar = () => {
           />
         </div>
         <div className="flex flex-wrap  w-[55%] sm:w-auto sm:space-x-2  bg-gradient-to-r from-fuchsia-50 to-cyan-100 bg-clip-text text-transparent md:space-x-4 lg:space-x-6 font-normal">
-          <Link
-            activeClass="active"
-            to="home"
-            spy={true}
-            smooth={true}
-            className="cursor-pointer mr-6 mb-2 sm:mr-0"
-          >
-            Home
-          </Link>
-
-          <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            className="cursor-pointer  mr-6  mb-2 sm:mr-0"
-          >
-            <p>About</p>
-          </Link>
-
-          <Link
-            activeClass="active"
-            to="certifications"
-            spy={true}
-            smooth={true}
-            className="cursor-pointer  mr-6 mb-2 sm:mr-0"
-          >
-            <p>Certifications</p>
-          </Link>
-
-          <Link
-            activeClass="active"
-            to="projects"
-            spy={true}
-            smooth={true}
-            className="cursor-pointer  mr-6 mb-2 sm:mr-0"
-          >
-            <p>Projects</p>
-          </Link>
-          <Link
-            activeClass="active"
-            to="skills"
-            spy={true}
-            smooth={true}
-            className="cursor-pointer  mr-6 mb-2 sm:mr-0"
-          >
-            <p>skills</p>
-          </Link>
-
-          <Link
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            className="cursor-pointer  mr-6  mb-2 sm:mr-0"
-          >
-            <p>Contact Me</p>
-          </Link>
+          {links.map((each) => (
+            <NavLink
+              id={each.id}
+              to={each.to}
+              title={each.title}
+              handleClick={handleClick}
+              isactive={activeTab === each.id}
+            />
+          ))}
         </div>
       </div>
     </div>
