@@ -15,8 +15,9 @@ const links = [
     website: "spotify-app-sruthi-palle.netlify.app/",
     title: "Spotify Music App",
     description:
-      "Implemented a responsive Spotify Music App where users can hear favourite and popular songs by searching the song or movie name or language name in the search bar. App has Around You section where users can see popular songs in their Own country",
+      "Implemented a responsive Spotify Music App where users can hear favourite and popular songs by searching the song or movie name or language name in the search bar.",
     githubLink: "https://github.com/Sruthi-Palle/spotify-app-sruthiPalle",
+    tech: "HTML, CSS, JavaScript,React Js, Redux, Tailwind CSS,RestAPI,React-router V6",
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ const links = [
     description:
       "Implemented portfolio Website with beatiful UI which showcase my Skills, Certifications, Projects. ",
     githubLink: "https://github.com/Sruthi-Palle/My-portfolio-Sruthi-palle",
+    tech: "HTML, CSS, JavaScript,React Js,TailWind Css,RestAPI",
   },
   {
     id: 3,
@@ -35,6 +37,7 @@ const links = [
     description:
       "Implemented a responsive Online Food Ordering System like Swiggy/Zomato where users can see popular restaurants with sort by rating, specific restaurant details, adding or removing food items to cart, and payments section",
     githubLink: "https://github.com/Sruthi-Palle/swiggy-Clone",
+    tech: "HTML, CSS, JavaScript, React JS, Bootstrap, React Slick, Figma,JWT Token,Authentication and Authorisation ",
   },
   {
     id: 4,
@@ -44,6 +47,7 @@ const links = [
     description:
       "Implemented Jobby App where users can log in and can see a list of jobs with search by Job title, filters based on Salary range and Employment type, etc",
     githubLink: "",
+    tech: "HTML,React JS, JS, CSS, Bootstrap, Routing, REST API Calls,JWT Token,Authentication and Authorisation",
   },
   {
     id: 5,
@@ -51,9 +55,10 @@ const links = [
     website: "shruthi-blogs-api-react-app.netlify.app/",
     title: "Blogs App",
     description:
-      "Developed simple blog list application where user can see list of blogs in user profile section.Implemented blog list using React component, props, lists & keys and achieved responsiveness using bootstrap flex classes and CSS box model through mobile-first approach.",
+      "Developed simple blog list application where user can see list of blogs in user profile section.Implemented blog list using React component, props, lists & keys",
     githubLink:
       "https://github.com/Sruthi-Palle/fetch-api-blogs-react-router-app",
+    tech: "HTML, CSS, JavaScript,React Js,FetchAPI,React-router-v6",
   },
   {
     id: 6,
@@ -64,6 +69,7 @@ const links = [
       "Developed a website where people like interviewers can see list of projects that a person implemented.",
     githubLink:
       "https://github.com/Sruthi-Palle/ReactJs-projects-categories-app",
+    tech: "HTML, CSS, JavaScript,React Js",
   },
   {
     id: 7,
@@ -72,8 +78,8 @@ const links = [
     title: "Wikipedia App",
     description:
       "Developed custom wikipedia search application where user can search and view curated results and can see detailed explanation in wikipedia by clicking on the specific result.",
-    githubLink:
-      "https://github.com/Sruthi-Palle/ReactJs-projects-categories-app",
+    githubLink: "https://github.com/Sruthi-Palle/sruthipalle_wikipedia_app",
+    tech: "HTML, CSS, JavaScript,Bootstrap",
   },
   {
     id: 8,
@@ -81,19 +87,19 @@ const links = [
     website: "sruthipalletodo.ccbp.tech",
     title: "Todo App",
     description:
-      "Developed persistent todo application with CRUD operations to track list of tasks. Implemented todo crud operations by using JavaScript event listeners and updated UI dynamically by using JavaScript DOM operations.",
-    githubLink:
-      "https://github.com/Sruthi-Palle/ReactJs-projects-categories-app",
+      "Developed persistent todo application with CRUD operations to track list of tasks.updated UI dynamically by using JavaScript DOM operations.",
+    githubLink: "",
+    tech: "HTML, CSS, JavaScript,Bootstrap",
   },
 ];
 
 export const Projects = () => {
   return (
-    <div className="bg-gradient-to-r from-cyan-200 to-fuchsia-200  p-5 text-fuchsia-800 font-light">
+    <div className="bg-gradient-to-r from-cyan-200 to-fuchsia-200  p-5 text-fuchsia-800 font-light ">
       <h1 className="text-4xl font-light py-5 sm:text-6xl text-fuchsia-800  px-10 pb-16">
         Projects
       </h1>
-      <div className="flex  sm:flex-row flex-col flex-wrap gap-10 justify-around items-center p-2">
+      <div className="flex  sm:flex-row flex-col flex-wrap gap-10 justify-around items-center lg:justify-start p-2 lg:gap-12 lg:pl-9">
         {links.map((each) => (
           <CardProject
             image={each.image}
@@ -102,6 +108,7 @@ export const Projects = () => {
             description={each.description}
             githubLink={each.githubLink}
             key={each.id}
+            tech={each.tech}
           />
         ))}
       </div>

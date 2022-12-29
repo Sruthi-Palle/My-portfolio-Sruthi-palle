@@ -3,9 +3,9 @@ import React from "react";
 export const Home = () => {
   return (
     <div className="flex sm:flex-row flex-col bg-gradient-to-r from-fuchsia-200 to-cyan-200 h-[700px] items-center justify-center sm:justify-around">
-      <p className="text-fuchsia-800 p-4 text-center font-extralight sm:text-xl">
+      <p className="text-fuchsia-900 p-4 text-center font-light sm:text-xl">
         Hi I am
-        <span className="block text-4xl sm:text-5xl font-light">
+        <span className="block text-4xl lg:text-6xl sm:text-5xl font-light">
           Sruthi, a front-end developer
         </span>{" "}
         with 1.2 years of freelancing experience.I design and build
