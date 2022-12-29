@@ -95,22 +95,24 @@ const links = [
 
 export const Projects = () => {
   return (
-    <div className="bg-gradient-to-r from-cyan-200 to-fuchsia-200  p-5 text-fuchsia-800 font-light ">
-      <h1 className="text-4xl font-light py-5 sm:text-6xl text-fuchsia-800  px-10 pb-16">
-        Projects
-      </h1>
-      <div className="flex  sm:flex-row flex-col flex-wrap gap-10 justify-around items-center lg:justify-start p-2 lg:gap-12 lg:pl-9">
-        {links.map((each) => (
-          <CardProject
-            image={each.image}
-            website={each.website}
-            title={each.title}
-            description={each.description}
-            githubLink={each.githubLink}
-            key={each.id}
-            tech={each.tech}
-          />
-        ))}
+    <div id="projects">
+      <div className="bg-gradient-to-r from-cyan-200 to-fuchsia-200  p-5 text-fuchsia-800 font-light ">
+        <h1 className="text-4xl font-light py-5 sm:text-6xl text-fuchsia-800  px-10 pb-16">
+          Projects
+        </h1>
+        <div className="flex  sm:flex-row flex-col flex-wrap gap-10 justify-around items-center lg:justify-start p-2 lg:gap-12 lg:pl-9">
+          {links.map((each) => (
+            <CardProject
+              image={each.image}
+              website={each.website}
+              title={each.title}
+              description={each.description}
+              githubLink={each.githubLink}
+              key={each.id}
+              tech={each.tech}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
